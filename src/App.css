@@ -1,0 +1,299 @@
+
+#root {
+  min-height: 100vh;
+}
+
+.dashboard {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 36px 0;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-icon,
+.icon-box {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-weight: 800;
+  border-radius: 13px;
+}
+
+.brand-icon {
+  width: 48px;
+  height: 48px;
+  color: white;
+  background: #7158e2;
+  font-size: 24px;
+}
+
+.dashboard-header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.dashboard-header p,
+.card-heading p {
+  margin: 5px 0 0;
+  color: #718096;
+  font-size: 14px;
+}
+
+.welcome-section {
+  margin: 44px 0 30px;
+}
+
+.eyebrow {
+  color: #7158e2;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.welcome-section h2 {
+  font-size: clamp(25px, 4vw, 36px);
+  margin: 12px 0;
+  letter-spacing: -1px;
+}
+
+.welcome-section > p {
+  color: #718096;
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.tool-card {
+  padding: 28px;
+  background: white;
+  border: 1px solid #e5e9f2;
+  border-radius: 22px;
+  box-shadow: 0 12px 35px rgba(31, 41, 55, 0.05);
+  min-width: 0;
+}
+
+.card-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.card-heading h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.icon-box {
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+}
+
+.purple {
+  background: #eee9ff;
+  color: #7158e2;
+}
+
+.green {
+  background: #dcf9ed;
+}
+
+.counter-display,
+.random-display {
+  min-height: 165px;
+  margin: 22px 0 12px;
+  border-radius: 16px;
+  background: #f7f8fc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.count-value,
+.random-value {
+  font-size: 58px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #222a3a;
+}
+
+.count-label {
+  color: #8290a5;
+  font-size: 13px;
+}
+
+.status {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 14px 0;
+}
+
+.warning {
+  color: #c77a13;
+}
+
+.success {
+  color: #16845d;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 10px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s, opacity 0.15s;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.button-group .btn {
+  flex: 1;
+}
+
+.btn-primary {
+  background: #7158e2;
+  color: white;
+}
+
+.btn-secondary {
+  background: #edf0f6;
+  color: #39445a;
+}
+
+.btn-reset {
+  width: 100%;
+  margin-top: 10px;
+  background: transparent;
+  color: #718096;
+  border: 1px solid #e5e9f2;
+}
+
+.btn-reset:hover {
+  background: #f7f8fc;
+}
+
+.empty-state,
+.generated-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.empty-state p,
+.history-empty {
+  color: #8290a5;
+  font-size: 13px;
+}
+
+.dice-placeholder {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border: 2px dashed #cbd3e1;
+  border-radius: 16px;
+  color: #8290a5;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.random-value {
+  color: #138765;
+}
+
+.btn-generate {
+  width: 100%;
+  color: white;
+  background: #159b73;
+}
+
+.history-section {
+  margin-top: 25px;
+}
+
+.history-section h3 {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.history-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.history-number {
+  min-width: 38px;
+  padding: 9px 12px;
+  text-align: center;
+  border-radius: 9px;
+  color: #138765;
+  background: #e5f8ef;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+footer {
+  margin-top: 36px;
+  text-align: center;
+  color: #8290a5;
+  font-size: 13px;
+}
+
+footer span {
+  padding: 0 5px;
+}
+
+@media (max-width: 700px) {
+  .dashboard {
+    padding: 24px 0;
+  }
+
+  .welcome-section {
+    margin-top: 32px;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tool-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 360px) {
+  .button-group {
+    flex-direction: column;
+  }
+}
